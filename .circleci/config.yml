@@ -24,13 +24,13 @@ jobs:
 
           command: git submodule update --init --recursive --remote
 
-      - run:
+      #- run:
 
-          name: Download Go Libs
+          #name: Download Go Libs
 
           #command: curl -L https://github.com/trojan-gfw/igniter-go-libs/releases/download/1.17/golibs.aar > app/src/libs/golibs.aar
 
-          echo OK
+           #command: echo
 
       - restore_cache:
 
