@@ -1,13 +1,76 @@
-# Use the latest 2.1 version of CircleCI pipeline process engine. See: https://circleci.com/docs/2.0/configuration-reference
-version: 2.1
-# Use a package of configuration called an orb.
-orbs:
-  # Declare a dependency on the welcome-orb
-  welcome: circleci/welcome-orb@0.4.1
-# Orchestrate or schedule a set of jobs
-workflows:
-  # Name the workflow "welcome"
-  welcome:
-    # Run the welcome/run job in its own container
-    jobs:
-      - welcome/run
+version: 2
+
+jobs:
+
+  build:
+
+    working_directory: ~/code
+
+    docker:
+
+      - image: circleci/android:api-28
+
+    environment:
+
+      JVM_OPTS: -Xmx4G
+
+    steps:
+
+      - checkout
+
+      - run:
+
+          name: Pull Submodules
+
+          command: git submodule update --init --recursive --remote
+
+      - run:
+
+          name: Download Go Libs
+
+          #command: curl -L https://github.com/trojan-gfw/igniter-go-libs/releases/download/1.17/golibs.aar > app/src/libs/golibs.aar
+
+          echo OK
+
+      - restore_cache:
+
+          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
+
+      - run:
+
+          name: Download Dependencies
+
+          command: ./gradlew androidDependencies
+
+      - save_cache:
+
+          paths:
+
+            - ~/.gradle
+
+          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
+
+      - run:
+
+          name: Run Tests
+
+          command: ./gradlew lint test
+
+      - store_test_results:
+
+          path: app/build/test-results
+
+          destination: test-results/
+
+      - run:
+
+          name: Initial build
+
+          command: ./gradlew clean assembleRelease --no-daemon --stacktrace
+
+      - store_artifacts:
+
+          path: app/build/outputs/apk/
+
+          destination: apks/
+
