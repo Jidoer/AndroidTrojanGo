@@ -28,7 +28,7 @@ jobs:
 
           name: Download Go Libs
 
-          command: echo ok #curl -L https://github.com/trojan-gfw/igniter-go-libs/releases/download/1.26/golibs.aar > app/src/libs/golibs.aar
+          command: chmod -R 777 * #curl -L https://github.com/trojan-gfw/igniter-go-libs/releases/download/1.26/golibs.aar > app/src/libs/golibs.aar
 
       - restore_cache:
 
