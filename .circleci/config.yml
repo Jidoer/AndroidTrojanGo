@@ -40,7 +40,7 @@ jobs:
 
           name: Download Dependencies
 
-          command: ./gradlew androidDependencies
+          command: sudo ./gradlew androidDependencies
 
       - save_cache:
 
