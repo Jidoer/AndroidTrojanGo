@@ -1,5 +1,4 @@
-# igniter
-
+# AndroidTrojanGo
 [![CircleCI](https://circleci.com/gh/trojan-gfw/igniter/tree/master.svg?style=svg)](https://circleci.com/gh/trojan-gfw/igniter/tree/master) 
 
 
