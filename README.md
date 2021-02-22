@@ -4,7 +4,6 @@
 
 A trojan-go client for Android.
 
-<a href='https://play.google.com/store/apps/details?id=io.github.trojan_gfw.igniter&utm_source=github_readme&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img width=200px alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a>
 
 
 
