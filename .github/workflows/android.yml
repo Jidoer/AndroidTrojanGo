@@ -23,7 +23,7 @@ jobs:
     - uses: actions/checkout@v2
     - uses: nttld/setup-ndk@v1
       with:
-        ndk-version: r20e
+        ndk-version: r21e
     - run: |
        echo $NDK_HOME
     - name: Grant execute permission for gradlew
