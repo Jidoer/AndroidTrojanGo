@@ -2,6 +2,7 @@ package io.github.trojan_gfw.igniter;
 
 import android.content.Context;
 import android.os.Environment;
+import android.util.Log;
 
 import java.io.File;
 
@@ -13,15 +14,21 @@ public class Globals {
     private static TrojanConfig trojanConfigInstance;
 
     public static void Init(Context ctx) {
-        cacheDir = ctx.getCacheDir().getAbsolutePath();
-        filesDir = ctx.getFilesDir().getAbsolutePath();
+
+        cacheDir = ctx.getCacheDir().toString();//.getAbsolutePath();
+        filesDir = ctx.getFilesDir().toString();//.getAbsolutePath();
+        Log.e("cacheDir",cacheDir);
+
         File externalDocDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS);
         File igniterExternalFileDir = new File(externalDocDir, "igniter");
+
         externalFilesDir = igniterExternalFileDir.getAbsolutePath();
         trojanConfigInstance = new TrojanConfig();
+
     }
 
     public static String getCaCertPath() {
+        ///data/user/0/com.car.trojango/cache/cacert.pem";
         return PathHelper.combine(cacheDir, "cacert.pem");
     }
 

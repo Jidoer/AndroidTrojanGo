@@ -6,11 +6,15 @@ import android.net.VpnService;
 
 import androidx.core.content.ContextCompat;
 
-import io.github.trojan_gfw.igniter.BuildConfig;
+
+import com.car.trojango.BuildConfig;
+import com.car.trojango.R;
+import com.car.trojango.ui.MainActivity;
+
 import io.github.trojan_gfw.igniter.Globals;
-import io.github.trojan_gfw.igniter.MainActivity;
+///import io.github.trojan_gfw.igniter.MainActivity;
 import io.github.trojan_gfw.igniter.ProxyService;
-import io.github.trojan_gfw.igniter.R;
+
 import io.github.trojan_gfw.igniter.TrojanConfig;
 import io.github.trojan_gfw.igniter.TrojanHelper;
 
@@ -54,3 +58,4 @@ public abstract class ProxyHelper {
         context.sendBroadcast(intent);
     }
 }
+

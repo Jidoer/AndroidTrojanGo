@@ -29,10 +29,13 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.car.trojango.R;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import io.github.trojan_gfw.igniter.R;
+
+
 import io.github.trojan_gfw.igniter.TrojanConfig;
 import io.github.trojan_gfw.igniter.common.app.BaseFragment;
 import io.github.trojan_gfw.igniter.qrcode.ScanQRCodeActivity;

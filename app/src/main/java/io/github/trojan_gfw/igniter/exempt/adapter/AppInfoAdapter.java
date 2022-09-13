@@ -13,10 +13,12 @@ import androidx.annotation.NonNull;
 import androidx.core.widget.TextViewCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.car.trojango.R;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import io.github.trojan_gfw.igniter.R;
+
 import io.github.trojan_gfw.igniter.exempt.data.AppInfo;
 
 public class AppInfoAdapter extends RecyclerView.Adapter<AppInfoAdapter.ViewHolder> {
@@ -37,6 +39,7 @@ public class AppInfoAdapter extends RecyclerView.Adapter<AppInfoAdapter.ViewHold
         View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_app_info, viewGroup, false);
         return new ViewHolder(v);
     }
+
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {

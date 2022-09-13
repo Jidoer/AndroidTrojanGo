@@ -6,8 +6,10 @@ import android.os.Bundle;
 
 import androidx.fragment.app.FragmentManager;
 
+import com.car.trojango.R;
+
 import io.github.trojan_gfw.igniter.Globals;
-import io.github.trojan_gfw.igniter.R;
+
 import io.github.trojan_gfw.igniter.common.app.BaseAppCompatActivity;
 import io.github.trojan_gfw.igniter.servers.data.ServerListDataManager;
 import io.github.trojan_gfw.igniter.servers.fragment.ServerListFragment;
@@ -24,6 +26,7 @@ public class ServerListActivity extends BaseAppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_server_list);
+
 
         FragmentManager fm = getSupportFragmentManager();
         ServerListFragment fragment = (ServerListFragment) fm.findFragmentByTag(ServerListFragment.TAG);

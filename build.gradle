@@ -15,10 +15,14 @@ buildscript {
     }
 }
 
+
+
 allprojects {
     repositories {
+        maven { url "https://jitpack.io" }
         google()
-        jcenter()
+        mavenCentral()
+        jcenter() // Warning: this repository is going to shut down soon
     }
     gradle.projectsEvaluated {
         tasks.withType(JavaCompile) {
