@@ -19,22 +19,13 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: gradle
-    - name: Android NDK toolchain Setup
-       # You may pin to the exact commit or the version.
-       # uses: ravinderjangra/android-ndk-toolchain-setup@88bfbd8e61af597832637fb9d2f81a7cc68d1331
-      uses: ravinderjangra/android-ndk-toolchain-setup@0.2
-       with:
-        # Android API
-         api: # default is 21
-         # Platform arch
-         arch: 
-         # Path to use for NDK toolchain
-         install-location: 
-         # Force install toolchain
-         force: false # optional, default is false
-         # Add toolchain to the path
-         add-to-path: true # optional, default is true
-
+        
+    - uses: actions/checkout@v2
+    - uses: nttld/setup-ndk@v1
+      with:
+        ndk-version: r20e
+    - run: |
+       echo $NDK_HOME
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
