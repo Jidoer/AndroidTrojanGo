@@ -4,7 +4,10 @@
 
 A trojan-go client for Android.
 
-
+### screenshot
+<img width="365" height="640" src="https://github.com/Jidoer/AndroidTrojanGo/blob/main/screenshot/0.png?raw=true"/>
+<img width="365" height="640" src="https://github.com/Jidoer/AndroidTrojanGo/blob/main/screenshot/1.png?raw=true"/>
+<img width="365" height="640" src="https://github.com/Jidoer/AndroidTrojanGo/blob/main/screenshot/2.png?raw=true"/>
 
 
 ## Thanks
