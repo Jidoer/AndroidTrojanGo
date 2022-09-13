@@ -10,8 +10,10 @@ import android.service.quicksettings.TileService;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 
+import com.car.trojango.ui.MainActivity;
+
 import io.github.trojan_gfw.igniter.LogHelper;
-import io.github.trojan_gfw.igniter.MainActivity;
+///import io.github.trojan_gfw.igniter.MainActivity;
 import io.github.trojan_gfw.igniter.ProxyService;
 import io.github.trojan_gfw.igniter.common.constants.Constants;
 import io.github.trojan_gfw.igniter.common.utils.PreferenceUtils;

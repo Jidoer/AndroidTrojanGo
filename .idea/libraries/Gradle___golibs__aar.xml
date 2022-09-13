@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="Gradle: :golibs:@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ef3d1802c87e3a30b5adb34a6a11bacf/jetified-golibs/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dda9b314ad004af16d48d3960bb96049/jetified-golibs/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e6636109b68698e06896bd348dbf1d80/jetified-golibs/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6eca1db18b6e875b284be5805752385e/jetified-golibs/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6eca1db18b6e875b284be5805752385e/jetified-golibs/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6eca1db18b6e875b284be5805752385e/jetified-golibs/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0f5553f2d834c44fc25c96b39341380e/jetified-golibs/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0f5553f2d834c44fc25c96b39341380e/jetified-golibs/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0f5553f2d834c44fc25c96b39341380e/jetified-golibs/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -22,6 +22,9 @@ import android.os.RemoteException;
 import androidx.annotation.IntDef;
 import androidx.core.app.NotificationCompat;
 
+import com.car.trojango.R;
+import com.car.trojango.ui.MainActivity;
+
 import org.json.JSONObject;
 
 import java.io.File;
@@ -155,6 +158,7 @@ public class ProxyService extends VpnService implements TestConnection.OnResultL
         filter.addAction(getString(R.string.stop_service));
         registerReceiver(mStopBroadcastReceiver, filter);
     }
+
 
     @Override
     public void onDestroy() {
@@ -343,7 +347,7 @@ public class ProxyService extends VpnService implements TestConnection.OnResultL
             e.printStackTrace();
             trojanPort = 1081;
         }
-        LogHelper.i("Igniter", "trojan port is " + trojanPort);
+        LogHelper.i("TrojanCat", "trojan port is " + trojanPort);
         TrojanHelper.ChangeListenPort(Globals.getTrojanConfigPath(), trojanPort);
         TrojanHelper.ShowConfig(Globals.getTrojanConfigPath());
 
@@ -359,7 +363,7 @@ public class ProxyService extends VpnService implements TestConnection.OnResultL
                 }
                 while (clashSocksPort == trojanPort);
 
-                LogHelper.i("igniter", "clash port is " + clashSocksPort);
+                LogHelper.i("TrojanCat", "clash port is " + clashSocksPort);
                 ClashHelper.ChangeClashConfig(Globals.getClashConfigPath(),
                         trojanPort, clashSocksPort);
                 ClashHelper.ShowConfig(Globals.getClashConfigPath());
@@ -372,7 +376,7 @@ public class ProxyService extends VpnService implements TestConnection.OnResultL
         } else {
             tun2socksPort = trojanPort;
         }
-        LogHelper.i("igniter", "tun2socks port is " + tun2socksPort);
+        LogHelper.i("TrojanCat", "tun2socks port is " + tun2socksPort);
 
         // debug/info/warn/error/none
         Tun2socksStartOptions tun2socksStartOptions = new Tun2socksStartOptions();
@@ -393,20 +397,20 @@ public class ProxyService extends VpnService implements TestConnection.OnResultL
 
         setState(STARTED);
 
-        Intent openMainActivityIntent = new Intent(this, MainActivity.class);
-        openMainActivityIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        PendingIntent pendingOpenMainActivityIntent = PendingIntent.getActivity(this, 0, openMainActivityIntent, 0);
+        //Intent openMainActivityIntent = new Intent(this, MainActivity.class);
+        //openMainActivityIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        //PendingIntent pendingOpenMainActivityIntent = PendingIntent.getActivity(this, 0, openMainActivityIntent, 0);
         String igniterRunningStatusStr = "listening on port: " + tun2socksPort;
         final String channelId = getString(R.string.notification_channel_id);
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, channelId)
-                .setSmallIcon(R.drawable.ic_tile)
-                .setContentTitle("Igniter Active")
+                .setSmallIcon(R.drawable.ic_action_name)
+                .setContentTitle("TrojanCat Running")
                 .setContentText(igniterRunningStatusStr)
                 .setStyle(new NotificationCompat.BigTextStyle()
                         .bigText(igniterRunningStatusStr))
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
                 // Set the intent that will fire when the user taps the notification
-                .setContentIntent(pendingOpenMainActivityIntent)
+           //     .setContentIntent(pendingOpenMainActivityIntent)
                 .setAutoCancel(false)
                 .setOngoing(true);
         startForeground(IGNITER_STATUS_NOTIFY_MSG_ID, builder.build());

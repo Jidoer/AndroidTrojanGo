@@ -12,7 +12,8 @@ import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.core.widget.ContentLoadingProgressBar;
 
-import io.github.trojan_gfw.igniter.R;
+import com.car.trojango.R;
+
 
 public class LoadingDialog extends Dialog {
     private TextView mMsgTv;

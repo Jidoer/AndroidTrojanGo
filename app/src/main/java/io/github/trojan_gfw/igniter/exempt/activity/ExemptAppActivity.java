@@ -7,8 +7,10 @@ import android.view.Window;
 
 import androidx.fragment.app.FragmentManager;
 
+import com.car.trojango.R;
+
 import io.github.trojan_gfw.igniter.Globals;
-import io.github.trojan_gfw.igniter.R;
+
 import io.github.trojan_gfw.igniter.common.app.BaseAppCompatActivity;
 import io.github.trojan_gfw.igniter.exempt.contract.ExemptAppContract;
 import io.github.trojan_gfw.igniter.exempt.data.ExemptAppDataManager;
@@ -21,6 +23,7 @@ public class ExemptAppActivity extends BaseAppCompatActivity {
     public static Intent create(Context context) {
         return new Intent(context, ExemptAppActivity.class);
     }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

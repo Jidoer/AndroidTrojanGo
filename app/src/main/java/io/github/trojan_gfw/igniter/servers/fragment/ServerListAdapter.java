@@ -9,10 +9,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.car.trojango.R;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import io.github.trojan_gfw.igniter.R;
+
 import io.github.trojan_gfw.igniter.TrojanConfig;
 
 public class ServerListAdapter extends RecyclerView.Adapter<ViewHolder> {
@@ -33,6 +35,7 @@ public class ServerListAdapter extends RecyclerView.Adapter<ViewHolder> {
         vh.bindListener(mOnItemClickListener);
         return vh;
     }
+
 
     public void replaceData(List<TrojanConfig> data) {
         mData.clear();

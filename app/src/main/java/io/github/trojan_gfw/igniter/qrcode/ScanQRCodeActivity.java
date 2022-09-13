@@ -7,9 +7,11 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.car.trojango.R;
+
 import cn.bingoogolapple.qrcode.core.BarcodeType;
 import cn.bingoogolapple.qrcode.zxing.ZXingView;
-import io.github.trojan_gfw.igniter.R;
+
 
 public class ScanQRCodeActivity extends AppCompatActivity implements ZXingView.Delegate {
     public static final String KEY_SCAN_CONTENT = "content";

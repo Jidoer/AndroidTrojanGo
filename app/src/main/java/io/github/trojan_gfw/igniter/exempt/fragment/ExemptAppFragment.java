@@ -21,9 +21,11 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.car.trojango.R;
+
 import java.util.List;
 
-import io.github.trojan_gfw.igniter.R;
+
 import io.github.trojan_gfw.igniter.common.app.BaseFragment;
 import io.github.trojan_gfw.igniter.common.dialog.LoadingDialog;
 import io.github.trojan_gfw.igniter.common.utils.SnackbarUtils;
@@ -53,6 +55,7 @@ public class ExemptAppFragment extends BaseFragment implements ExemptAppContract
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_exempt_app, container, false);
     }
+
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {

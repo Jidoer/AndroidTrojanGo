@@ -11,8 +11,13 @@ import android.os.RemoteException;
 
 import androidx.annotation.NonNull;
 
+import com.car.trojango.R;
+import com.car.trojango.ui.HomeFragment;
+import com.car.trojango.ui.MainActivity;
+
 import io.github.trojan_gfw.igniter.ProxyService;
-import io.github.trojan_gfw.igniter.R;
+
+
 import io.github.trojan_gfw.igniter.proxy.aidl.ITrojanService;
 import io.github.trojan_gfw.igniter.proxy.aidl.ITrojanServiceCallback;
 
@@ -78,6 +83,8 @@ public class TrojanConnection implements ServiceConnection, Binder.DeathRecipien
     /**
      * Callback for events that are relative to {@link ProxyService}.
      */
+
+    //wranng
     public interface Callback {
         void onServiceConnected(ITrojanService service);
 
@@ -105,6 +112,7 @@ public class TrojanConnection implements ServiceConnection, Binder.DeathRecipien
         intent.setAction(context.getString(R.string.bind_service));
         context.bindService(intent, this, Context.BIND_AUTO_CREATE);
     }
+
 
     public void disconnect(Context context) {
         unregisterServiceCallback();
