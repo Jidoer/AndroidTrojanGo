@@ -1,7 +1,7 @@
 port: 0  # HTTP proxy, not used
 socks-port: 1080
 udp: true
-allow-lan: false
+allow-lan: true #false
 mode: Rule
 log-level: debug
 #experimental:

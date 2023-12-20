@@ -14,12 +14,13 @@
     <string name="menu_slideshow">Slideshow</string>
 
     <string name="home_second">Home Second</string>
-    <string name="permissionReason">请授予存储权限，用于读写frp配置文件</string>
+    <string name="permissionReason">请授予存储权限，用于读写TrojanGo配置文件</string>
     <string name="action_add">添加</string>
-    <string name="action_add_text">新建配置文本</string>
+    <string name="action_add_text">新建配置</string>
+    <string name="action_add_url">从网址导入</string>
     <string name="action_add_file">从文件导入</string>
     <string name="action_ping">延迟测试</string>
-    <string name="action_add_url">从网址导入</string>
+
     <string name="action_add_scan">扫描二维码</string>
 
 
@@ -34,7 +35,7 @@
     <string name="titleModifyFileName">修改文件名称</string>
     <string name="notOpened">未开启</string>
     <string name="hasOpened">已开启</string>
-    <string name="notSelectIni">未选择配置文件</string>
+    <string name="notSelectIni">Please select the Proxy config</string>
     <string name="needStopService">请先关闭服务</string>
     <string name="title_about">关于</string>
     <string name="title_logcat">logcat</string>
@@ -42,9 +43,6 @@
     <string name="logcat_copy">复制</string>
     <string name="logcat_delete">删除</string>
     <string name="copySuccess">复制成功</string>
-    <!--
-    <string name="title_frp_version">frp version 0.33.0</string>
-    <string name="title_app_version">app version 0.33.0.1</string>-->
     <string name="titleTemplate">模板文件</string>
 
 
@@ -65,13 +63,13 @@
     <string name="verify_certificate">Verify Certificate</string>
     <string name="label_clash">Exempt Chinese Domain/IPs</string>
     <string name="enable_ipv6">Enable IPv6</string>
-    <string name="stop_service">io.github.trojan_gfw.igniter.STOP_SERVICE</string>
-    <string name="bind_service">io.github.trojan_gfw.igniter.BIND_SERVICE</string>
+    <string name="stop_service">com.car.service.STOP_SERVICE</string>
+    <string name="bind_service">com.car.service.BIND_SERVICE</string>
     <string name="connected_to__in__ms">Connected to %1$s in %2$sms.</string>
     <string name="failed_to_connect_to__">Failed to connect to %1$s: %2$s</string>
     <string name="invalid_configuration">Invalid Configuration</string>
-    <string name="notification_channel_id">igniter_notify_chan</string>
-    <string name="notification_channel_name">Igniter notifications</string>
+    <string name="notification_channel_id">cat_notify_chan</string>
+    <string name="notification_channel_name">TrojanCat notifications</string>
     <string name="notification_starting_service">Starting service</string>
     <string name="main_restart_proxy_service_tip">Restart proxy yourself to apply new exempt apps configuration.</string>
     <string name="clipboard_import_tip">Do you want to import the Trojan URL you just copied?</string>
@@ -90,7 +88,7 @@
 
     <string name="main_write_external_storage_permission_requirement">
         Igniter needs to read and write external storage for reading or writing exempted app
-        list, which is recoverable even when TrojanCat is uninstalled. Denying the permission
+        list, which is recoverable even when Igniter is uninstalled. Denying the permission
         will deactivate exempted app feature.
     </string>
     <string name="main_exempt_feature_permission_requirement">
@@ -126,6 +124,6 @@
     <string name="credit_item1_title">Dreamacro/clash</string>
     <string name="credit_item2_title">eycorsican/go-tun2socks</string>
     <string name="credit_item3_title">bingoogolapple/BGAQRCode-Android</string>
-
     <string name="action_about">About</string>
+
 </resources>

@@ -55,7 +55,7 @@ public class LogcatActivity extends AppCompatActivity {
         lst.add("-v");
         lst.add("time");
         lst.add("-s");
-        lst.add("GoLog,io.github.trojan_gfw.igniter.ProxyService");
+        lst.add("GoLog,com.car.service.ProxyService,ProxyService");
         Observable.create((ObservableOnSubscribe<String>) emitter -> {
 
             if (flush) {

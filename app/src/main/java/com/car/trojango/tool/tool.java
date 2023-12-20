@@ -11,9 +11,8 @@ import androidx.annotation.NonNull;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.car.trojango.Constants;
 import com.car.trojango.R;
-import com.car.trojango.ui.IniEditActivity;
 import com.car.trojango.ui.LoadCat;
-import com.car.trojango.ui.MainActivity;
+
 
 import java.io.File;
 import java.io.FileWriter;

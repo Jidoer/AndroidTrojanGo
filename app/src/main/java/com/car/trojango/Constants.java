@@ -12,13 +12,12 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Constants {
-    public static final String INI_PATH = "config";
+    public static final String INI_PATH = "json";
 
     public static final String INI_FILE_SUF = ".json";
 
     public static String getIniFileParentPath(Context context) {
-        return context.getCacheDir().getPath() + File.separator + Constants.INI_PATH;
-
+        return context.getFilesDir().getPath() + File.separator + Constants.INI_PATH;
     }
 
     public static File getIniFileParent(Context context) {

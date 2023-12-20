@@ -11,20 +11,18 @@
         <menu>
             <item
                 android:id="@+id/action_new_text"
-                android:orderInCategory="80"
+                android:orderInCategory="100"
                 android:title="@string/action_add_text"
                 app:showAsAction="never" />
             <item
                 android:id="@+id/action_add_file"
-                android:orderInCategory="90"
+                android:orderInCategory="100"
                 android:title="@string/action_add_file"
-                android:visible="true"
                 app:showAsAction="never" />
             <item
                 android:id="@+id/action_ping"
                 android:orderInCategory="100"
                 android:title="@string/action_ping"
-                android:visible="true"
                 app:showAsAction="never" />
             <item
                 android:id="@+id/action_add_url"

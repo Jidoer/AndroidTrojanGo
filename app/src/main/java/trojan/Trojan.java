@@ -21,6 +21,9 @@ public abstract class Trojan {
 	private static native void _init();
 	
 	
+	public static final String Name = "CLIENT";
+	
+	// skipped function GenerateClientTree with unsupported parameter or return types
 	
 	public static native void runClient(String filename);
 	/**

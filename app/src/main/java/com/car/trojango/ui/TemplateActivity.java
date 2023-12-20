@@ -44,7 +44,7 @@ public class TemplateActivity extends AppCompatActivity {
         Observable.create(new ObservableOnSubscribe<String>() {
             @Override
             public void subscribe(ObservableEmitter<String> emitter) throws Exception {
-                emitter.onNext(Constants.getStringFromRaw(TemplateActivity.this, R.raw.config_full));
+                emitter.onNext(Constants.getStringFromRaw(TemplateActivity.this, R.raw.config));
                 emitter.onComplete();
             }
         })
